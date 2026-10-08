@@ -1,0 +1,16 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'app.nor.prayertv'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'app.nor.prayertv'
+        minSdk 21
+        targetSdk 34
+        versionCode 2
+        versionName '1.1'
+    }
+    buildTypes { release { minifyEnabled false; signingConfig signingConfigs.debug } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    aaptOptions { noCompress 'html', 'mp3' }
+    lint { checkReleaseBuilds false; abortOnError false }
+}
